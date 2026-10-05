@@ -1,0 +1,263 @@
+---
+layout: default
+title: "Sana En Yakın Etkinlikler, Konserler ve Mekanlar"
+seo_title: "Cerca - Konser, Tiyatro, Stand-Up ve Etkinlik Biletleri"
+seo_description: "Türkiye'nin 81 ilinde konserler, tiyatro oyunları, festivaller ve etkinlik mekanları. Size en yakın kültür-sanat etkinliklerini Cerca ile hemen keşfedin."
+---
+
+<!-- HERO SECTION -->
+<section class="cerca-hero">
+  <div class="cerca-container">
+    <div class="cerca-hero-badge">
+      <i class="fas fa-sparkles"></i> 81 İlde Kültür & Sanat Rehberi
+    </div>
+    
+    <h1 class="cerca-hero-title">
+      Sana En <span>Yakın</span> Etkinlikleri Keşfet
+    </h1>
+    
+    <p class="cerca-hero-subtitle">
+      Şehrinizdeki konserler, tiyatro sahneleri, stand-up şovları ve festivaller tek platformda.
+    </p>
+
+    <!-- Hero Canlı Arama -->
+    <div class="cerca-hero-search-box">
+      <i class="fas fa-search text-muted ps-2" aria-hidden="true"></i>
+      <input type="text" id="cercaHeroSearch" placeholder="Etkinlik, sanatçı veya mekan adı yazıp Enter'a basın..." />
+      <button type="button" class="cerca-btn-nearme" onclick="cercaFindNearMe()">
+        <i class="fas fa-location-crosshairs"></i> Yakınımdakiler
+      </button>
+    </div>
+
+    <!-- Canlı Platform İstatistikleri (Trust Badges) -->
+    <div class="cerca-hero-stats">
+      <div class="cerca-stat-item">
+        <div class="cerca-stat-val">{{ site.data.istatistikler.toplamEtkinlik | default: "21.247" }}</div>
+        <div class="cerca-stat-label">Toplam Etkinlik</div>
+      </div>
+      <div class="cerca-stat-item">
+        <div class="cerca-stat-val">{{ site.data.istatistikler.toplamMekan | default: "4.407" }}</div>
+        <div class="cerca-stat-label">Kayıtlı Mekan</div>
+      </div>
+      <div class="cerca-stat-item">
+        <div class="cerca-stat-val">{{ site.data.istatistikler.toplamSanatci | default: "2.650" }}</div>
+        <div class="cerca-stat-label">Sanatçı & Grup</div>
+      </div>
+      <div class="cerca-stat-item">
+        <div class="cerca-stat-val">81</div>
+        <div class="cerca-stat-label">İl Kapsamı</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPÜLER ŞEHİRLER -->
+<section class="cerca-section">
+  <div class="cerca-container">
+    <div class="cerca-section-header">
+      <div>
+        <h2 class="cerca-section-title">Şehirlere Göre Etkinlikler</h2>
+        <p class="text-muted">Bulunduğunuz ili seçerek güncel takvimi görüntüleyin</p>
+      </div>
+      <a href="/sehirler/" class="cerca-section-link">Tüm Şehirler (81 İl) <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+      {% for sehir in site.data.sehirler limit: 12 %}
+      <a href="/sehir/{{ sehir.slug }}/" class="cerca-cat-pill" style="padding: 10px 18px; font-size: 0.95rem;">
+        <i class="fas fa-location-dot" style="color: var(--cerca-primary);"></i>
+        <strong>{{ sehir.ad }}</strong>
+        <span style="font-size: 0.75rem; background: var(--cerca-border); padding: 2px 6px; border-radius: 10px; color: var(--cerca-text);">
+          {{ sehir.mekanSayisi }} mekan
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ÖNE ÇIKAN VE YAKLAŞAN ETKİNLİKLER -->
+<section class="cerca-section" style="background: var(--cerca-surface);">
+  <div class="cerca-container">
+    <div class="cerca-section-header">
+      <div>
+        <h2 class="cerca-section-title">Öne Çıkan Etkinlikler</h2>
+        <p class="text-muted">En popüler konserler, tiyatrolar ve gösteriler</p>
+      </div>
+      <a href="/kategori/konser/" class="cerca-section-link">Tüm Etkinlikler <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="cerca-grid">
+      {% for etkinlik in site.data.etkinlikler_core limit: 8 %}
+      <article class="cerca-card">
+        <div class="cerca-card-header">
+          <span class="cerca-badge-cat">
+            <i class="fas {{ etkinlik.tipIcon | default: 'fa-ticket' }}"></i> {{ etkinlik.altTur | default: etkinlik.tipAdi }}
+          </span>
+          {% if etkinlik.isActive %}
+          <span class="cerca-badge-status active">
+            <i class="fas fa-circle-check"></i> Aktif Seans
+          </span>
+          {% else %}
+          <span class="cerca-badge-status past">
+            <i class="fas fa-clock-rotate-left"></i> Arşiv
+          </span>
+          {% endif %}
+        </div>
+
+        <div class="cerca-card-body">
+          <h3 class="cerca-card-title">
+            <a href="/etkinlik/{{ etkinlik.slug }}/">{{ etkinlik.adi }}</a>
+          </h3>
+
+          <div class="cerca-card-meta">
+            {% if etkinlik.sehirler.size > 0 %}
+            <div class="cerca-card-meta-row">
+              <i class="fas fa-location-dot text-muted"></i>
+              <span>{{ etkinlik.sehirler | join: ", " }}</span>
+            </div>
+            {% endif %}
+            
+            {% if etkinlik.mekanlar.size > 0 %}
+            <div class="cerca-card-meta-row">
+              <i class="fas fa-landmark text-muted"></i>
+              <span>{{ etkinlik.mekanlar | first }}</span>
+            </div>
+            {% endif %}
+
+            {% if etkinlik.seanslar.size > 0 %}
+            <div class="cerca-card-meta-row" style="color: var(--cerca-primary); font-weight: 600;">
+              <i class="fas fa-calendar-alt"></i>
+              <span>{{ etkinlik.seanslar[0].tarih | slice: 0, 16 }}</span>
+            </div>
+            {% endif %}
+          </div>
+
+          <p class="cerca-card-summary">
+            {{ etkinlik.ozetKisa | default: etkinlik.seoAciklama }}
+          </p>
+
+          <div class="cerca-card-footer">
+            <span class="text-muted" style="font-size: 0.8rem;">
+              <i class="fas fa-ticket"></i> {{ etkinlik.toplamSeans }} Seans
+            </span>
+            <a href="/etkinlik/{{ etkinlik.slug }}/" class="cerca-card-btn">
+              İncele & Bilet <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- POPÜLER MEKANLAR -->
+<section class="cerca-section">
+  <div class="cerca-container">
+    <div class="cerca-section-header">
+      <div>
+        <h2 class="cerca-section-title">Popüler Kültür-Sanat Mekanları</h2>
+        <p class="text-muted">Türkiye'nin en sevilen performans merkezleri, tiyatro ve konser salonları</p>
+      </div>
+      <a href="/mekanlar/" class="cerca-section-link">Tüm Mekanlar (4.407 Mekan) <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="cerca-grid">
+      {% for mekan in site.data.mekanlar_populer limit: 6 %}
+      <div class="cerca-card" style="padding: 20px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: var(--cerca-primary-light); color: var(--cerca-primary); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+            <i class="fas fa-landmark"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; margin-bottom: 2px;">
+              <a href="/mekan/{{ mekan.slug }}/">{{ mekan.baslik }}</a>
+            </h4>
+            <span style="font-size: 0.825rem; color: var(--cerca-primary); font-weight: 600;">
+              📍 {{ mekan.sehirAdi }}
+            </span>
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--cerca-text-muted); margin-bottom: 14px; line-height: 1.4;">
+          {{ mekan.adres | truncate: 95 }}
+        </p>
+
+        <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--cerca-border); padding-top: 10px;">
+          <span style="font-size: 0.8rem; color: var(--cerca-text-muted);">
+            <i class="fas fa-calendar-check"></i> {{ mekan.etkinlikSayisi }} Etkinlik
+          </span>
+          <a href="/mekan/{{ mekan.slug }}/" class="cerca-card-btn">
+            Mekanı Gör <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- SANATÇILAR VE GRUPLAR -->
+<section class="cerca-section" style="background: var(--cerca-surface);">
+  <div class="cerca-container">
+    <div class="cerca-section-header">
+      <div>
+        <h2 class="cerca-section-title">Sanatçılar ve Müzik Grupları</h2>
+        <p class="text-muted">Turne takvimleri ve sahne alan ünlü sanatçılar</p>
+      </div>
+      <a href="/sanatcilar/" class="cerca-section-link">Tüm Sanatçılar (2.650 Sanatçı) <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+    <div class="cerca-grid">
+      {% for sanatci in site.data.sanatcilar_populer limit: 6 %}
+      <div class="cerca-card" style="padding: 20px;">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #FF7A00, #FF5500); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700;">
+            {{ sanatci.adiSoyadi | slice: 0, 1 }}
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; margin-bottom: 2px;">
+              <a href="/sanatci/{{ sanatci.slug }}/">{{ sanatci.adiSoyadi }}</a>
+            </h4>
+            {% if sanatci.dogumYeri %}
+            <span style="font-size: 0.8rem; color: var(--cerca-text-muted);">
+              {{ sanatci.dogumYeri }}
+            </span>
+            {% endif %}
+          </div>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--cerca-text-muted); margin-bottom: 14px; line-height: 1.4;">
+          {{ sanatci.bioOzet | default: "Sanatçı hakkında detaylı biyografi ve turne takvimi." | truncate: 100 }}
+        </p>
+
+        <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--cerca-border); padding-top: 10px;">
+          <span style="font-size: 0.8rem; color: var(--cerca-text-muted);">
+            <i class="fas fa-microphone"></i> {{ sanatci.etkinlikAdedi }} Etkinlik
+          </span>
+          <a href="/sanatci/{{ sanatci.slug }}/" class="cerca-card-btn">
+            Konserler <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- SEO & PLATFORM AÇIKLAMASI (Google & Yandex Crawlers) -->
+<section class="cerca-section">
+  <div class="cerca-container">
+    <div style="background: #FFFFFF; border: 1px solid var(--cerca-border); border-radius: var(--radius-md); padding: 32px;">
+      <h3 style="margin-bottom: 12px; font-size: 1.3rem;">Cerca Nedir? Size En Yakın Etkinlikleri Nasıl Bulur?</h3>
+      <p style="color: var(--cerca-text-muted); font-size: 0.925rem; line-height: 1.7; margin-bottom: 16px;">
+        <strong>Cerca</strong>, İspanyolca ve Latince kökenli olup <em>"yakın"</em> anlamına gelir. Amacımız Türkiye genelindeki tüm konser, tiyatro, stand-up ve festival etkinliklerini GPS tabanlı konumunuza ve il/ilçe bilginize göre organize etmektir. 
+        4.407 kayıtlı kültür mekanının koordinatlarını kullanarak, bulunduğunuz konuma birkaç kilometre mesafedeki etkinlikleri anında listeler.
+      </p>
+      <p style="color: var(--cerca-text-muted); font-size: 0.925rem; line-height: 1.7;">
+        İstanbul, İzmir, Ankara, Antalya, Muğla ve Türkiye'nin 81 ilindeki kültür merkezleri, bilet kuralları, sanatçı biyografileri ve seans saatlerine tek tıkla ulaşabilirsiniz.
+      </p>
+    </div>
+  </div>
+</section>

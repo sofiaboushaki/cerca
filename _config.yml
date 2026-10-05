@@ -1,0 +1,35 @@
+# ==============================================================================
+# CERCA JEKYLL KONFİGÜRASYONU
+# ==============================================================================
+
+title: Cerca
+tagline: Sana En Yakın Etkinlikler, Konserler ve Mekanlar
+description: "Türkiye'nin 81 ilinde konserler, tiyatro oyunları, stand-up gösterileri ve mekanlar."
+url: "https://cerca.com.tr"
+baseurl: ""
+
+lang: tr
+timezone: Europe/Istanbul
+encoding: utf-8
+
+# Markdown ve Sass Ayarları
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Koleksiyonlar
+collections:
+  tabs:
+    output: true
+    permalink: /:title/
+
+# Hariç Tutulan Dosyalar (Derleme Hızı için)
+exclude:
+  - chirpy-upstream
+  - scripts
+  - "*.csv"
+  - README.md
+  - LICENSE
+  - Gemfile.lock

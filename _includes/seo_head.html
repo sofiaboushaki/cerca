@@ -1,0 +1,128 @@
+<!-- ==============================================================================
+     CERCA GELİŞMİŞ SEO VE YAPILANDIRILMIŞ VERİ (SCHEMA.ORG JSON-LD) MOTORU
+     Google & Yandex Arama Motoru İndeksleme ve Zengin Sonuçlar (Rich Results) Standardı
+     ============================================================================== -->
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+{% assign page_title = page.seo_title | default: page.title | default: site.data.cerca_settings.brand.name %}
+{% assign page_desc = page.seo_description | default: page.description | default: site.data.cerca_settings.seo.default_description %}
+{% assign canonical_url = page.url | absolute_url %}
+
+<title>{{ page_title }}{{ site.data.cerca_settings.seo.title_suffix }}</title>
+<meta name="description" content="{{ page_desc | strip_html | truncate: 160 }}" />
+<meta name="keywords" content="{{ page.keywords | default: site.data.cerca_settings.seo.keywords }}" />
+<link rel="canonical" href="{{ canonical_url }}" />
+
+<!-- Robots Index / Follow -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow" />
+<meta name="yandex" content="index, follow" />
+
+<!-- OpenGraph (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:locale" content="tr_TR" />
+<meta property="og:type" content="{% if page.layout == 'event' %}website{% else %}website{% endif %}" />
+<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:description" content="{{ page_desc | strip_html | truncate: 200 }}" />
+<meta property="og:url" content="{{ canonical_url }}" />
+<meta property="og:site_name" content="{{ site.data.cerca_settings.brand.name }}" />
+<meta property="og:image" content="{{ page.image | default: site.data.cerca_settings.brand.logo | absolute_url }}" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ page_title }}" />
+<meta name="twitter:description" content="{{ page_desc | strip_html | truncate: 200 }}" />
+<meta name="twitter:image" content="{{ page.image | default: site.data.cerca_settings.brand.logo | absolute_url }}" />
+
+<!-- Favicon & PWA -->
+<link rel="icon" type="image/svg+xml" href="{{ site.data.cerca_settings.brand.favicon | default: '/assets/img/favicon.svg' }}" />
+<meta name="theme-color" content="{{ site.data.cerca_settings.theme.primary | default: '#FF6600' }}" />
+
+<!-- ==============================================================================
+     SCHEMA.ORG JSON-LD YAPILANDIRILMIŞ VERİLER
+     ============================================================================== -->
+
+<!-- 1. WebSite & Arama Kutusu Şeması -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.data.cerca_settings.brand.name }}",
+  "url": "{{ site.data.cerca_settings.seo.site_url }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "{{ site.data.cerca_settings.seo.site_url }}/ara?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- 2. BreadcrumbList (Ekmek Kırıntısı Navigasyon Şeması) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Ana Sayfa",
+      "item": "{{ site.data.cerca_settings.seo.site_url }}"
+    }
+    {% if page.city_name %}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.city_name }} Etkinlikleri",
+      "item": "{{ site.data.cerca_settings.seo.site_url }}/sehir/{{ page.city_slug }}/"
+    }
+    {% endif %}
+    {% if page.title and page.layout != 'home' %}
+    ,{
+      "@type": "ListItem",
+      "position": {% if page.city_name %}3{% else %}2{% endif %},
+      "name": "{{ page.title }}",
+      "item": "{{ canonical_url }}"
+    }
+    {% endif %}
+  ]
+}
+</script>
+
+<!-- 3. Etkinlik Şeması (Event Schema - Sadece Etkinlik Sayfalarında) -->
+{% if page.layout == 'event' and page.event_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "{{ page.event_data.adi | default: page.title }}",
+  "description": "{{ page.event_data.seoAciklama | default: page.description | strip_html | truncate: 250 }}",
+  "eventStatus": "{% if page.event_data.isActive %}https://schema.org/EventScheduled{% else %}https://schema.org/EventScheduled{% endif %}",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "startDate": "{{ page.event_data.tarih | default: '2026-10-15T20:00:00+03:00' }}",
+  "location": {
+    "@type": "Place",
+    "name": "{{ page.event_data.mekanAdi | default: 'Konser & Gösteri Merkezi' }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ page.event_data.sehirAdi | default: 'İstanbul' }}",
+      "addressCountry": "TR"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ canonical_url }}",
+    "availability": "{% if page.event_data.isActive %}https://schema.org/InStock{% else %}https://schema.org/SoldOut{% endif %}",
+    "priceCurrency": "TRY",
+    "validFrom": "2026-01-01T00:00:00+03:00"
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Cerca",
+    "url": "{{ site.data.cerca_settings.seo.site_url }}"
+  }
+}
+</script>
+{% endif %}

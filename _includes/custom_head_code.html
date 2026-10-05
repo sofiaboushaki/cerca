@@ -1,0 +1,20 @@
+<!-- ==============================================================================
+     CERCA CUSTOM HEAD CODE
+     Bu dosya Google Search Console, Yandex Webmaster, AdSense veya özel CSS kodlarınızı
+     kolayca eklemeniz için ayrılmıştır. Buraya eklenen kodlar tüm sayfaların <head>
+     alanında otomatik olarak çalışacaktır.
+     ============================================================================== -->
+
+{% if site.data.cerca_settings.seo.google_site_verification and site.data.cerca_settings.seo.google_site_verification != "" %}
+<meta name="google-site-verification" content="{{ site.data.cerca_settings.seo.google_site_verification }}" />
+{% endif %}
+
+{% if site.data.cerca_settings.seo.yandex_verification and site.data.cerca_settings.seo.yandex_verification != "" %}
+<meta name="yandex-verification" content="{{ site.data.cerca_settings.seo.yandex_verification }}" />
+{% endif %}
+
+{% if site.data.cerca_settings.seo.bing_verification and site.data.cerca_settings.seo.bing_verification != "" %}
+<meta name="msvalidate.01" content="{{ site.data.cerca_settings.seo.bing_verification }}" />
+{% endif %}
+
+<!-- Kullanıcı Özel Head Kodları (Gerektiğinde buraya ekleyiniz) -->

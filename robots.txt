@@ -1,0 +1,34 @@
+# ==============================================================================
+# CERCA ROBOTS.TXT
+# Googlebot & YandexBot Tarama Bütçesi ve İndeksleme Optimizasyonu
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /sehir/
+Allow: /kategori/
+Allow: /mekan/
+Allow: /sanatci/
+Allow: /etkinlik/
+
+# Arama motoru bütçesini israf eden iç arama ve filtre parametrelerini engelle
+Disallow: /ara?*
+Disallow: /*?sort=*
+Disallow: /*?filter=*
+Disallow: /*&sort=*
+
+# Yandex Özel Yönergesi
+User-agent: Yandex
+Allow: /
+Clean-param: ref /
+Clean-param: source /
+
+# XML Sitemap Dizini ve Parçalı Haritalar (Toplam 28.402 URL)
+Sitemap: https://cerca.com.tr/sitemap.xml
+Sitemap: https://cerca.com.tr/sitemap-etkinlikler.xml
+Sitemap: https://cerca.com.tr/sitemap-mekanlar.xml
+Sitemap: https://cerca.com.tr/sitemap-sanatcilar.xml
+Sitemap: https://cerca.com.tr/sitemap-sehirler.xml
+Sitemap: https://cerca.com.tr/sitemap-kategoriler.xml
+Sitemap: https://cerca.com.tr/sitemap-ana.xml

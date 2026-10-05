@@ -1,0 +1,22 @@
+<!-- ==============================================================================
+     CERCA HEADER (Üst Bilgilendirme ve Hızlı Link Çubuğu)
+     ============================================================================== -->
+<header class="cerca-topbar" aria-label="Üst Duyuru">
+  <div class="cerca-container">
+    <div class="cerca-topbar-inner">
+      <div class="d-flex align-items-center gap-2">
+        <span class="cerca-topbar-badge">
+          <i class="fas fa-radar"></i> Canlı Keşif
+        </span>
+        <span class="d-none d-md-inline text-muted">
+          {{ site.data.cerca_settings.brand.sub_tagline | default: "Türkiye genelindeki tüm konser ve tiyatro takvimini keşfet." }}
+        </span>
+      </div>
+      <ul class="cerca-topbar-links">
+        <li><a href="/sehirler/"><i class="fas fa-city me-1"></i> Şehirler</a></li>
+        <li><a href="/mekanlar/"><i class="fas fa-landmark me-1"></i> Mekanlar</a></li>
+        <li><a href="/sanatcilar/"><i class="fas fa-microphone-alt me-1"></i> Sanatçılar</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

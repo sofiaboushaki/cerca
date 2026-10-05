@@ -1,0 +1,40 @@
+---
+layout: default
+title: "Türkiye Şehirler Etkinlik Rehberi (81 İl)"
+seo_title: "81 İl Etkinlik, Konser ve Tiyatro Rehberi | Cerca"
+seo_description: "Türkiye'nin 81 ilindeki kültür-sanat etkinlikleri, mekanlar ve biletler. Bulunduğunuz şehri seçerek konser ve tiyatro takvimini hemen inceleyin."
+---
+
+<div class="cerca-container" style="padding-top: 36px; padding-bottom: 60px;">
+  <!-- Breadcrumb -->
+  <nav aria-label="Ekmek Kırıntısı" style="margin-bottom: 20px; font-size: 0.85rem; color: var(--cerca-text-muted);">
+    <a href="/">Ana Sayfa</a> &raquo;
+    <span style="color: var(--cerca-text); font-weight: 600;">Şehirler Rehberi</span>
+  </nav>
+
+  <div class="cerca-section-header">
+    <div>
+      <h1 class="cerca-section-title">81 İl Etkinlik ve Mekan Rehberi</h1>
+      <p class="text-muted">Bulunduğunuz veya gitmek istediğiniz şehri seçin</p>
+    </div>
+  </div>
+
+  <div class="cerca-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+    {% for sehir in site.data.sehirler %}
+    <a href="/sehir/{{ sehir.slug }}/" class="cerca-card" style="padding: 18px; text-decoration: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span style="font-size: 0.8rem; font-weight: 800; background: var(--cerca-primary-light); color: var(--cerca-primary); padding: 2px 8px; border-radius: 6px;">
+          {{ sehir.plaka }}
+        </span>
+        <span style="font-size: 0.8rem; color: var(--cerca-text-muted);">
+          {{ sehir.mekanSayisi }} Mekan
+        </span>
+      </div>
+      <h3 style="font-size: 1.15rem; margin-bottom: 4px;">{{ sehir.ad }}</h3>
+      <p style="font-size: 0.825rem; color: var(--cerca-text-muted);">
+        {{ sehir.etkinlikSayisi }} seans / etkinlik
+      </p>
+    </a>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,133 @@
+---
+layout: default
+title: "Bana En Yakın Etkinlikler ve Mekanlar"
+seo_title: "Bana En Yakın Etkinlikler, Konserler ve Mekanlar | Cerca"
+seo_description: "GPS konumunuza göre hesaplanan en yakın konserler, tiyatro oyunları ve etkinlik mekanları. Size yürüme ve sürüş mesafesindeki kültürü anında bulun."
+---
+
+<div class="cerca-container" style="padding-top: 36px; padding-bottom: 60px;">
+  <!-- Breadcrumb -->
+  <nav aria-label="Ekmek Kırıntısı" style="margin-bottom: 20px; font-size: 0.85rem; color: var(--cerca-text-muted);">
+    <a href="/">Ana Sayfa</a> &raquo;
+    <span style="color: var(--cerca-text); font-weight: 600;">Yakınımdakiler</span>
+  </nav>
+
+  <div class="cerca-section-header">
+    <div>
+      <h1 class="cerca-section-title">
+        <i class="fas fa-location-crosshairs text-primary" style="color: var(--cerca-primary);"></i>
+        Konumunuza En Yakın Etkinlikler
+      </h1>
+      <p class="text-muted" id="cercaLocationStatus">
+        Konumunuz tespit ediliyor, lütfen tarayıcınızdan konum izni veriniz...
+      </p>
+    </div>
+    <div>
+      <button type="button" class="cerca-btn-nearme" onclick="initNearMeDiscovery()">
+        <i class="fas fa-rotate"></i> Konumu Yenile
+      </button>
+    </div>
+  </div>
+
+  <!-- En Yakın Mekanlar Grid -->
+  <div id="nearMeResults" class="cerca-grid">
+    <!-- JavaScript tarafından dinamik olarak mesafeye göre doldurulacaktır -->
+    <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FFFFFF; border: 1px solid var(--cerca-border); border-radius: var(--radius-md);">
+      <i class="fas fa-satellite-dish fa-spin" style="font-size: 2.5rem; color: var(--cerca-primary); margin-bottom: 16px;"></i>
+      <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Mekanlar ve Seanslar Taranıyor...</h3>
+      <p class="text-muted">4.407 kayıtlı mekan arasından enlem ve boylam koordinatlarınıza göre en yakın olanlar listeleniyor.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  initNearMeDiscovery();
+});
+
+function initNearMeDiscovery() {
+  const statusEl = document.getElementById('cercaLocationStatus');
+  const resultsEl = document.getElementById('nearMeResults');
+
+  // URL'den veya sessionStorage'dan koordinat al
+  const params = new URLSearchParams(window.location.search);
+  let userLat = parseFloat(params.get('lat') || sessionStorage.getItem('cerca_user_lat'));
+  let userLon = parseFloat(params.get('lon') || sessionStorage.getItem('cerca_user_lon'));
+
+  if (userLat && userLon) {
+    statusEl.innerHTML = `📍 Konumunuz alındı: Enlem ${userLat.toFixed(3)}, Boylam ${userLon.toFixed(3)}. Size en yakın mekanlar listeleniyor.`;
+    loadNearestVenues(userLat, userLon);
+  } else {
+    if (!navigator.geolocation) {
+      statusEl.innerHTML = "Tarayıcınız konum servisini desteklemiyor. Lütfen İstanbul veya İzmir sayfalarını inceleyiniz.";
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        userLat = pos.coords.latitude;
+        userLon = pos.coords.longitude;
+        sessionStorage.setItem('cerca_user_lat', userLat);
+        sessionStorage.setItem('cerca_user_lon', userLon);
+        statusEl.innerHTML = `📍 Konumunuz alındı: Enlem ${userLat.toFixed(3)}, Boylam ${userLon.toFixed(3)}. Size en yakın mekanlar listeleniyor.`;
+        loadNearestVenues(userLat, userLon);
+      },
+      (err) => {
+        statusEl.innerHTML = "⚠️ Konum izni verilmedi. Varsayılan olarak popüler İstanbul kültür mekanları gösterilmektedir.";
+        // İstanbul koordinatı varsayılan (Taksim)
+        loadNearestVenues(41.037, 28.985);
+      },
+      { timeout: 8000, enableHighAccuracy: true }
+    );
+  }
+}
+
+function loadNearestVenues(userLat, userLon) {
+  fetch('/_data/mekanlar_populer.json')
+    .then(res => res.json())
+    .then(venues => {
+      // Mesafeleri hesapla
+      const calculated = venues.map(v => {
+        const dist = (v.enlem && v.boylam) ? calculateDistanceKm(userLat, userLon, v.enlem, v.boylam) : 9999;
+        return { ...v, mesafeKm: dist };
+      });
+
+      // Mesafeye göre artan sırada sırala
+      calculated.sort((a, b) => a.mesafeKm - b.mesafeKm);
+      const topNearest = calculated.slice(0, 18);
+
+      const resultsEl = document.getElementById('nearMeResults');
+      resultsEl.innerHTML = topNearest.map(v => `
+        <div class="cerca-card" style="padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <span class="cerca-badge-cat" style="background: var(--cerca-primary-light); color: var(--cerca-primary);">
+              📍 ${v.sehirAdi}
+            </span>
+            <span style="font-weight: 700; color: var(--cerca-primary); font-size: 0.85rem; background: #FFF4ED; padding: 4px 8px; border-radius: 999px;">
+              <i class="fas fa-route"></i> ${v.mesafeKm} km uzakta
+            </span>
+          </div>
+
+          <h3 style="font-size: 1.15rem; margin-bottom: 6px;">
+            <a href="/mekan/${v.slug}/">${v.baslik}</a>
+          </h3>
+
+          <p style="font-size: 0.85rem; color: var(--cerca-text-muted); margin-bottom: 14px; line-height: 1.4;">
+            ${v.adres.substring(0, 85)}...
+          </p>
+
+          <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--cerca-border); padding-top: 10px;">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=${v.enlem},${v.boylam}" target="_blank" rel="noopener" style="font-size: 0.825rem; font-weight: 600; color: var(--cerca-primary);">
+              <i class="fas fa-diamond-turn-right"></i> Yol Tarifi
+            </a>
+            <a href="/mekan/${v.slug}/" class="cerca-card-btn">
+              Etkinlikler (${v.etkinlikSayisi}) <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      `).join('');
+    })
+    .catch(err => {
+      console.error("Mekan verisi yüklenirken hata:", err);
+    });
+}
+</script>

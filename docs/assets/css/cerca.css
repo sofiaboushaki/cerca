@@ -1,0 +1,676 @@
+/* ==============================================================================
+   CERCA - DESIGN SYSTEM & TEMA STİLLERİ
+   Turuncu & Sıcak Açık Tonlar (Google & Yandex SEO Uyumlu, Mobil Öncelikli)
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap');
+
+:root {
+  /* Temel Renk Paleti */
+  --cerca-primary: #FF6600;
+  --cerca-primary-hover: #E65C00;
+  --cerca-primary-light: #FFF4ED;
+  --cerca-primary-glow: rgba(255, 102, 0, 0.18);
+  --cerca-accent: #FF944D;
+  
+  /* Arka Plan Tonları (Sıcak Açık & Temiz) */
+  --cerca-bg: #FAF9F6;
+  --cerca-card-bg: #FFFFFF;
+  --cerca-card-hover-bg: #FFFFFF;
+  --cerca-surface: #F4F2ED;
+  
+  /* Metin ve Kontrast */
+  --cerca-text: #1E2022;
+  --cerca-text-muted: #68717A;
+  --cerca-text-light: #8E98A0;
+  --cerca-heading: #111315;
+  
+  /* Çizgi & Ayrım */
+  --cerca-border: #EAE8E2;
+  --cerca-border-hover: #D7D4CC;
+  
+  /* Rozet ve Durum Renkleri */
+  --cerca-success: #10B981;
+  --cerca-success-light: #ECFDF5;
+  --cerca-warning: #F59E0B;
+  --cerca-warning-light: #FEF3C7;
+  --cerca-past: #64748B;
+  --cerca-past-light: #F1F5F9;
+
+  /* Gölgeler & Derinlik */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 25px -5px rgba(255, 102, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 14px 30px rgba(255, 102, 0, 0.12), 0 4px 6px rgba(0, 0, 0, 0.04);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+  
+  --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Sıfırlama ve Temel */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--cerca-bg);
+  color: var(--cerca-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  color: var(--cerca-heading);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Konteyner */
+.cerca-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==============================================================================
+   ÜST DUYURU ÇUBUĞU / HEADER
+   ============================================================================== */
+.cerca-topbar {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--cerca-border);
+  font-size: 0.825rem;
+  color: var(--cerca-text-muted);
+  padding: 8px 0;
+}
+
+.cerca-topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cerca-topbar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--cerca-primary-light);
+  color: var(--cerca-primary);
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.cerca-topbar-links {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+.cerca-topbar-links a:hover {
+  color: var(--cerca-primary);
+}
+
+/* ==============================================================================
+   NAVBAR (MODÜLER VE ÖZELLEŞTİRİLEBİLİR)
+   ============================================================================== */
+.cerca-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--cerca-border);
+  padding: 14px 0;
+  transition: var(--transition);
+}
+
+.cerca-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cerca-brand-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.cerca-brand-logo img {
+  height: 44px;
+  width: auto;
+}
+
+/* Şehir Seçici Dropdown */
+.cerca-city-selector {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cerca-city-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cerca-surface);
+  border: 1px solid var(--cerca-border);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cerca-text);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cerca-city-btn:hover {
+  border-color: var(--cerca-primary);
+  background: #FFFFFF;
+}
+
+/* Arama Çubuğu */
+.cerca-search-bar {
+  flex: 1;
+  max-width: 440px;
+  position: relative;
+}
+
+.cerca-search-input {
+  width: 100%;
+  padding: 10px 18px 10px 42px;
+  background: var(--cerca-surface);
+  border: 1px solid var(--cerca-border);
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  color: var(--cerca-text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.cerca-search-input:focus {
+  background: #FFFFFF;
+  border-color: var(--cerca-primary);
+  box-shadow: 0 0 0 3px var(--cerca-primary-glow);
+}
+
+.cerca-search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cerca-text-light);
+  pointer-events: none;
+}
+
+/* Nav Linkleri & Aksiyonlar */
+.cerca-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cerca-nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cerca-text);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.cerca-nav-link:hover {
+  color: var(--cerca-primary);
+  background: var(--cerca-primary-light);
+}
+
+.cerca-btn-nearme {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #FF7A00 0%, #FF5500 100%);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 9px 18px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 14px rgba(255, 102, 0, 0.32);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cerca-btn-nearme:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.45);
+}
+
+/* Kategori İkincil Bar */
+.cerca-subnav {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--cerca-border);
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.cerca-subnav::-webkit-scrollbar {
+  display: none;
+}
+
+.cerca-subnav-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.cerca-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cerca-text-muted);
+  background: var(--cerca-surface);
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.cerca-cat-pill:hover,
+.cerca-cat-pill.active {
+  color: var(--cerca-primary);
+  background: var(--cerca-primary-light);
+  border-color: rgba(255, 102, 0, 0.2);
+}
+
+/* ==============================================================================
+   HERO SECTION & ARAMA MOTORU
+   ============================================================================== */
+.cerca-hero {
+  padding: 50px 0 40px;
+  background: radial-gradient(circle at 50% 0%, #FFF3EC 0%, var(--cerca-bg) 70%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cerca-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 102, 0, 0.25);
+  box-shadow: var(--shadow-sm);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cerca-primary);
+  margin-bottom: 18px;
+}
+
+.cerca-hero-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  color: var(--cerca-heading);
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+
+.cerca-hero-title span {
+  color: var(--cerca-primary);
+  position: relative;
+}
+
+.cerca-hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--cerca-text-muted);
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.cerca-hero-search-box {
+  background: #FFFFFF;
+  border: 2px solid rgba(255, 102, 0, 0.2);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-pill);
+  padding: 8px;
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cerca-hero-search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px 16px;
+  color: var(--cerca-text);
+}
+
+.cerca-hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.cerca-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cerca-stat-val {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--cerca-heading);
+}
+
+.cerca-stat-val span {
+  color: var(--cerca-primary);
+}
+
+.cerca-stat-label {
+  font-size: 0.825rem;
+  color: var(--cerca-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==============================================================================
+   KARTLAR (ETKİNLİK, MEKAN, SANATÇI)
+   ============================================================================== */
+.cerca-section {
+  padding: 40px 0;
+}
+
+.cerca-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.cerca-section-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.cerca-section-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--cerca-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cerca-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+/* Etkinlik Kartı */
+.cerca-card {
+  background: var(--cerca-card-bg);
+  border: 1px solid var(--cerca-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: relative;
+}
+
+.cerca-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(255, 102, 0, 0.3);
+}
+
+.cerca-card-header {
+  padding: 16px 18px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cerca-badge-cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cerca-primary);
+  background: var(--cerca-primary-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cerca-badge-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.cerca-badge-status.active {
+  background: var(--cerca-success-light);
+  color: var(--cerca-success);
+}
+
+.cerca-badge-status.past {
+  background: var(--cerca-past-light);
+  color: var(--cerca-past);
+}
+
+.cerca-card-body {
+  padding: 0 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cerca-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--cerca-heading);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cerca-card-meta {
+  font-size: 0.85rem;
+  color: var(--cerca-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.cerca-card-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.cerca-card-summary {
+  font-size: 0.85rem;
+  color: var(--cerca-text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.cerca-card-footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--cerca-surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cerca-card-btn {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cerca-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==============================================================================
+   EVERGREEN EVENT BANNER (SİLİNMEYEN SAYFA & SEO KORUMA)
+   ============================================================================== */
+.cerca-evergreen-banner {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cerca-evergreen-icon {
+  font-size: 1.5rem;
+  color: #D97706;
+}
+
+.cerca-evergreen-content h4 {
+  font-size: 1.05rem;
+  color: #92400E;
+  margin-bottom: 4px;
+}
+
+.cerca-evergreen-content p {
+  font-size: 0.9rem;
+  color: #B45309;
+}
+
+/* ==============================================================================
+   FOOTER (MODÜLER VE SEO İÇ LİNK AĞI)
+   ============================================================================== */
+.cerca-footer {
+  margin-top: auto;
+  background: #FFFFFF;
+  border-top: 1px solid var(--cerca-border);
+  padding: 50px 0 24px;
+}
+
+.cerca-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.cerca-footer-brand p {
+  color: var(--cerca-text-muted);
+  font-size: 0.9rem;
+  margin-top: 12px;
+  max-width: 320px;
+}
+
+.cerca-footer-col h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--cerca-heading);
+}
+
+.cerca-footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cerca-footer-links a {
+  font-size: 0.875rem;
+  color: var(--cerca-text-muted);
+}
+
+.cerca-footer-links a:hover {
+  color: var(--cerca-primary);
+  padding-left: 3px;
+}
+
+.cerca-footer-bottom {
+  border-top: 1px solid var(--cerca-border);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.825rem;
+  color: var(--cerca-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cerca-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .cerca-nav-inner {
+    flex-wrap: wrap;
+  }
+  .cerca-search-bar {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+  .cerca-footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .cerca-footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

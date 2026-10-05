@@ -1,0 +1,77 @@
+<!-- ==============================================================================
+     CERCA NAVBAR (Logo, Şehir Seçici, Arama, Yakınımdaki Etkinlikler & Kategoriler)
+     ============================================================================== -->
+<nav class="cerca-navbar" aria-label="Ana Menü">
+  <div class="cerca-container">
+    <div class="cerca-nav-inner">
+      <!-- Logo -->
+      <a href="/" class="cerca-brand-logo" title="{{ site.data.cerca_settings.brand.name }} Ana Sayfa">
+        <img src="{{ site.data.cerca_settings.brand.logo | default: '/assets/img/cerca-logo.svg' }}" 
+             alt="{{ site.data.cerca_settings.brand.name }} Logo" width="220" height="44" />
+      </a>
+
+      <!-- Şehir Seçici -->
+      <div class="cerca-city-selector">
+        <select id="cercaCitySelect" class="cerca-city-btn" onchange="cercaChangeCity(this.value)" aria-label="Şehir Seçin">
+          <option value="" disabled selected>📍 Şehir Seçin</option>
+          <option value="istanbul">📍 İstanbul</option>
+          <option value="izmir">📍 İzmir</option>
+          <option value="ankara">📍 Ankara</option>
+          <option value="antalya">📍 Antalya</option>
+          <option value="bursa">📍 Bursa</option>
+          <option value="mugla">📍 Muğla</option>
+          <option value="eskisehir">📍 Eskişehir</option>
+          <option value="tum-sehirler">Tüm Şehirler (81 İl)</option>
+        </select>
+      </div>
+
+      <!-- Canlı Hızlı Arama -->
+      <div class="cerca-search-bar">
+        <i class="fas fa-search cerca-search-icon" aria-hidden="true"></i>
+        <input type="text" id="cercaQuickSearch" class="cerca-search-input" 
+               placeholder="Etkinlik, sanatçı, mekan veya kategori ara..." 
+               autocomplete="off" aria-label="Etkinlik veya mekan arama" />
+      </div>
+
+      <!-- Nav Aksiyonları -->
+      <div class="cerca-nav-actions">
+        <button type="button" class="cerca-btn-nearme" onclick="cercaFindNearMe()" title="Bana en yakın etkinlikleri göster">
+          <i class="fas fa-location-arrow"></i>
+          <span>Yakınımdakiler</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Yatay Kategori Çubuğu -->
+<div class="cerca-subnav" aria-label="Etkinlik Kategorileri">
+  <div class="cerca-container">
+    <div class="cerca-subnav-inner">
+      <a href="/" class="cerca-cat-pill active">
+        <i class="fas fa-compass"></i> Tümü
+      </a>
+      <a href="/kategori/konser/" class="cerca-cat-pill">
+        <i class="fas fa-music"></i> Konser
+      </a>
+      <a href="/kategori/tiyatro/" class="cerca-cat-pill">
+        <i class="fas fa-masks-theater"></i> Tiyatro
+      </a>
+      <a href="/kategori/stand-up/" class="cerca-cat-pill">
+        <i class="fas fa-microphone"></i> Stand-Up & Mizah
+      </a>
+      <a href="/kategori/festival/" class="cerca-cat-pill">
+        <i class="fas fa-campground"></i> Festival
+      </a>
+      <a href="/kategori/cocuk/" class="cerca-cat-pill">
+        <i class="fas fa-child"></i> Çocuk & Aile
+      </a>
+      <a href="/kategori/kultur-sanat/" class="cerca-cat-pill">
+        <i class="fas fa-palette"></i> Kültür & Sanat
+      </a>
+      <a href="/kategori/sinema/" class="cerca-cat-pill">
+        <i class="fas fa-film"></i> Sinema
+      </a>
+    </div>
+  </div>
+</div>

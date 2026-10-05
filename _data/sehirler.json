@@ -1,0 +1,812 @@
+[
+  {
+    "id": 34,
+    "ad": "İstanbul",
+    "slug": "istanbul",
+    "plaka": "34",
+    "mekanSayisi": 820,
+    "etkinlikSayisi": 80427,
+    "seoBaslik": "İstanbul Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "İstanbul şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 6,
+    "ad": "Ankara",
+    "slug": "ankara",
+    "plaka": "06",
+    "mekanSayisi": 426,
+    "etkinlikSayisi": 43709,
+    "seoBaslik": "Ankara Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Ankara şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 35,
+    "ad": "İzmir",
+    "slug": "izmir",
+    "plaka": "35",
+    "mekanSayisi": 725,
+    "etkinlikSayisi": 39823,
+    "seoBaslik": "İzmir Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "İzmir şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 7,
+    "ad": "Antalya",
+    "slug": "antalya",
+    "plaka": "07",
+    "mekanSayisi": 223,
+    "etkinlikSayisi": 8531,
+    "seoBaslik": "Antalya Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Antalya şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 16,
+    "ad": "Bursa",
+    "slug": "bursa",
+    "plaka": "16",
+    "mekanSayisi": 157,
+    "etkinlikSayisi": 7102,
+    "seoBaslik": "Bursa Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Bursa şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 41,
+    "ad": "Kocaeli",
+    "slug": "kocaeli",
+    "plaka": "41",
+    "mekanSayisi": 98,
+    "etkinlikSayisi": 5728,
+    "seoBaslik": "Kocaeli Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kocaeli şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 26,
+    "ad": "Eskişehir",
+    "slug": "eskisehir",
+    "plaka": "26",
+    "mekanSayisi": 114,
+    "etkinlikSayisi": 5216,
+    "seoBaslik": "Eskişehir Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Eskişehir şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 48,
+    "ad": "Muğla",
+    "slug": "mugla",
+    "plaka": "48",
+    "mekanSayisi": 210,
+    "etkinlikSayisi": 4345,
+    "seoBaslik": "Muğla Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Muğla şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 9,
+    "ad": "Aydın",
+    "slug": "aydin",
+    "plaka": "09",
+    "mekanSayisi": 102,
+    "etkinlikSayisi": 2449,
+    "seoBaslik": "Aydın Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Aydın şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 33,
+    "ad": "Mersin",
+    "slug": "mersin",
+    "plaka": "33",
+    "mekanSayisi": 94,
+    "etkinlikSayisi": 2127,
+    "seoBaslik": "Mersin Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Mersin şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 1,
+    "ad": "Adana",
+    "slug": "adana",
+    "plaka": "01",
+    "mekanSayisi": 61,
+    "etkinlikSayisi": 1960,
+    "seoBaslik": "Adana Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Adana şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 50,
+    "ad": "Nevşehir",
+    "slug": "nevsehir",
+    "plaka": "50",
+    "mekanSayisi": 25,
+    "etkinlikSayisi": 1896,
+    "seoBaslik": "Nevşehir Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Nevşehir şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 10,
+    "ad": "Balıkesir",
+    "slug": "balikesir",
+    "plaka": "10",
+    "mekanSayisi": 69,
+    "etkinlikSayisi": 1872,
+    "seoBaslik": "Balıkesir Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Balıkesir şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 42,
+    "ad": "Konya",
+    "slug": "konya",
+    "plaka": "42",
+    "mekanSayisi": 63,
+    "etkinlikSayisi": 1410,
+    "seoBaslik": "Konya Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Konya şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 59,
+    "ad": "Tekirdağ",
+    "slug": "tekirdag",
+    "plaka": "59",
+    "mekanSayisi": 39,
+    "etkinlikSayisi": 1402,
+    "seoBaslik": "Tekirdağ Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Tekirdağ şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 20,
+    "ad": "Denizli",
+    "slug": "denizli",
+    "plaka": "20",
+    "mekanSayisi": 48,
+    "etkinlikSayisi": 1341,
+    "seoBaslik": "Denizli Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Denizli şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 27,
+    "ad": "Gaziantep",
+    "slug": "gaziantep",
+    "plaka": "27",
+    "mekanSayisi": 53,
+    "etkinlikSayisi": 1337,
+    "seoBaslik": "Gaziantep Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Gaziantep şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 55,
+    "ad": "Samsun",
+    "slug": "samsun",
+    "plaka": "55",
+    "mekanSayisi": 50,
+    "etkinlikSayisi": 1176,
+    "seoBaslik": "Samsun Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Samsun şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 54,
+    "ad": "Sakarya",
+    "slug": "sakarya",
+    "plaka": "54",
+    "mekanSayisi": 44,
+    "etkinlikSayisi": 1109,
+    "seoBaslik": "Sakarya Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Sakarya şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 17,
+    "ad": "Çanakkale",
+    "slug": "canakkale",
+    "plaka": "17",
+    "mekanSayisi": 54,
+    "etkinlikSayisi": 965,
+    "seoBaslik": "Çanakkale Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Çanakkale şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 45,
+    "ad": "Manisa",
+    "slug": "manisa",
+    "plaka": "45",
+    "mekanSayisi": 39,
+    "etkinlikSayisi": 892,
+    "seoBaslik": "Manisa Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Manisa şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 21,
+    "ad": "Diyarbakır",
+    "slug": "diyarbakir",
+    "plaka": "21",
+    "mekanSayisi": 38,
+    "etkinlikSayisi": 881,
+    "seoBaslik": "Diyarbakır Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Diyarbakır şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 32,
+    "ad": "Isparta",
+    "slug": "isparta",
+    "plaka": "32",
+    "mekanSayisi": 48,
+    "etkinlikSayisi": 836,
+    "seoBaslik": "Isparta Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Isparta şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 38,
+    "ad": "Kayseri",
+    "slug": "kayseri",
+    "plaka": "38",
+    "mekanSayisi": 35,
+    "etkinlikSayisi": 719,
+    "seoBaslik": "Kayseri Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kayseri şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 14,
+    "ad": "Bolu",
+    "slug": "bolu",
+    "plaka": "14",
+    "mekanSayisi": 19,
+    "etkinlikSayisi": 575,
+    "seoBaslik": "Bolu Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Bolu şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 22,
+    "ad": "Edirne",
+    "slug": "edirne",
+    "plaka": "22",
+    "mekanSayisi": 45,
+    "etkinlikSayisi": 559,
+    "seoBaslik": "Edirne Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Edirne şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 61,
+    "ad": "Trabzon",
+    "slug": "trabzon",
+    "plaka": "61",
+    "mekanSayisi": 24,
+    "etkinlikSayisi": 506,
+    "seoBaslik": "Trabzon Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Trabzon şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 46,
+    "ad": "Kahramanmaraş",
+    "slug": "kahramanmaras",
+    "plaka": "46",
+    "mekanSayisi": 24,
+    "etkinlikSayisi": 502,
+    "seoBaslik": "Kahramanmaraş Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kahramanmaraş şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 64,
+    "ad": "Uşak",
+    "slug": "usak",
+    "plaka": "64",
+    "mekanSayisi": 11,
+    "etkinlikSayisi": 495,
+    "seoBaslik": "Uşak Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Uşak şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 63,
+    "ad": "Şanlıurfa",
+    "slug": "sanliurfa",
+    "plaka": "63",
+    "mekanSayisi": 15,
+    "etkinlikSayisi": 461,
+    "seoBaslik": "Şanlıurfa Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Şanlıurfa şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 31,
+    "ad": "Hatay",
+    "slug": "hatay",
+    "plaka": "31",
+    "mekanSayisi": 59,
+    "etkinlikSayisi": 460,
+    "seoBaslik": "Hatay Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Hatay şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 23,
+    "ad": "Elazığ",
+    "slug": "elazig",
+    "plaka": "23",
+    "mekanSayisi": 14,
+    "etkinlikSayisi": 449,
+    "seoBaslik": "Elazığ Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Elazığ şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 52,
+    "ad": "Ordu",
+    "slug": "ordu",
+    "plaka": "52",
+    "mekanSayisi": 22,
+    "etkinlikSayisi": 445,
+    "seoBaslik": "Ordu Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Ordu şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 58,
+    "ad": "Sivas",
+    "slug": "sivas",
+    "plaka": "58",
+    "mekanSayisi": 15,
+    "etkinlikSayisi": 433,
+    "seoBaslik": "Sivas Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Sivas şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 44,
+    "ad": "Malatya",
+    "slug": "malatya",
+    "plaka": "44",
+    "mekanSayisi": 16,
+    "etkinlikSayisi": 427,
+    "seoBaslik": "Malatya Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Malatya şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 67,
+    "ad": "Zonguldak",
+    "slug": "zonguldak",
+    "plaka": "67",
+    "mekanSayisi": 20,
+    "etkinlikSayisi": 380,
+    "seoBaslik": "Zonguldak Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Zonguldak şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 3,
+    "ad": "Afyonkarahisar",
+    "slug": "afyonkarahisar",
+    "plaka": "03",
+    "mekanSayisi": 18,
+    "etkinlikSayisi": 354,
+    "seoBaslik": "Afyonkarahisar Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Afyonkarahisar şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 25,
+    "ad": "Erzurum",
+    "slug": "erzurum",
+    "plaka": "25",
+    "mekanSayisi": 17,
+    "etkinlikSayisi": 351,
+    "seoBaslik": "Erzurum Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Erzurum şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 78,
+    "ad": "Karabük",
+    "slug": "karabuk",
+    "plaka": "78",
+    "mekanSayisi": 16,
+    "etkinlikSayisi": 328,
+    "seoBaslik": "Karabük Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Karabük şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 77,
+    "ad": "Yalova",
+    "slug": "yalova",
+    "plaka": "77",
+    "mekanSayisi": 10,
+    "etkinlikSayisi": 274,
+    "seoBaslik": "Yalova Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Yalova şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 57,
+    "ad": "Sinop",
+    "slug": "sinop",
+    "plaka": "57",
+    "mekanSayisi": 14,
+    "etkinlikSayisi": 260,
+    "seoBaslik": "Sinop Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Sinop şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 60,
+    "ad": "Tokat",
+    "slug": "tokat",
+    "plaka": "60",
+    "mekanSayisi": 15,
+    "etkinlikSayisi": 250,
+    "seoBaslik": "Tokat Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Tokat şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 39,
+    "ad": "Kırklareli",
+    "slug": "kirklareli",
+    "plaka": "39",
+    "mekanSayisi": 20,
+    "etkinlikSayisi": 249,
+    "seoBaslik": "Kırklareli Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kırklareli şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 43,
+    "ad": "Kütahya",
+    "slug": "kutahya",
+    "plaka": "43",
+    "mekanSayisi": 10,
+    "etkinlikSayisi": 249,
+    "seoBaslik": "Kütahya Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kütahya şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 47,
+    "ad": "Mardin",
+    "slug": "mardin",
+    "plaka": "47",
+    "mekanSayisi": 16,
+    "etkinlikSayisi": 229,
+    "seoBaslik": "Mardin Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Mardin şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 28,
+    "ad": "Giresun",
+    "slug": "giresun",
+    "plaka": "28",
+    "mekanSayisi": 11,
+    "etkinlikSayisi": 226,
+    "seoBaslik": "Giresun Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Giresun şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 72,
+    "ad": "Batman",
+    "slug": "batman",
+    "plaka": "72",
+    "mekanSayisi": 20,
+    "etkinlikSayisi": 218,
+    "seoBaslik": "Batman Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Batman şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 19,
+    "ad": "Çorum",
+    "slug": "corum",
+    "plaka": "19",
+    "mekanSayisi": 8,
+    "etkinlikSayisi": 214,
+    "seoBaslik": "Çorum Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Çorum şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 51,
+    "ad": "Niğde",
+    "slug": "nigde",
+    "plaka": "51",
+    "mekanSayisi": 9,
+    "etkinlikSayisi": 214,
+    "seoBaslik": "Niğde Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Niğde şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 65,
+    "ad": "Van",
+    "slug": "van",
+    "plaka": "65",
+    "mekanSayisi": 24,
+    "etkinlikSayisi": 207,
+    "seoBaslik": "Van Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Van şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 24,
+    "ad": "Erzincan",
+    "slug": "erzincan",
+    "plaka": "24",
+    "mekanSayisi": 9,
+    "etkinlikSayisi": 203,
+    "seoBaslik": "Erzincan Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Erzincan şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 5,
+    "ad": "Amasya",
+    "slug": "amasya",
+    "plaka": "05",
+    "mekanSayisi": 5,
+    "etkinlikSayisi": 195,
+    "seoBaslik": "Amasya Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Amasya şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 53,
+    "ad": "Rize",
+    "slug": "rize",
+    "plaka": "53",
+    "mekanSayisi": 10,
+    "etkinlikSayisi": 182,
+    "seoBaslik": "Rize Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Rize şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 70,
+    "ad": "Karaman",
+    "slug": "karaman",
+    "plaka": "70",
+    "mekanSayisi": 10,
+    "etkinlikSayisi": 175,
+    "seoBaslik": "Karaman Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Karaman şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 81,
+    "ad": "Düzce",
+    "slug": "duzce",
+    "plaka": "81",
+    "mekanSayisi": 16,
+    "etkinlikSayisi": 173,
+    "seoBaslik": "Düzce Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Düzce şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 15,
+    "ad": "Burdur",
+    "slug": "burdur",
+    "plaka": "15",
+    "mekanSayisi": 14,
+    "etkinlikSayisi": 168,
+    "seoBaslik": "Burdur Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Burdur şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 74,
+    "ad": "Bartın",
+    "slug": "bartin",
+    "plaka": "74",
+    "mekanSayisi": 11,
+    "etkinlikSayisi": 163,
+    "seoBaslik": "Bartın Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Bartın şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 37,
+    "ad": "Kastamonu",
+    "slug": "kastamonu",
+    "plaka": "37",
+    "mekanSayisi": 12,
+    "etkinlikSayisi": 148,
+    "seoBaslik": "Kastamonu Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kastamonu şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 36,
+    "ad": "Kars",
+    "slug": "kars",
+    "plaka": "36",
+    "mekanSayisi": 9,
+    "etkinlikSayisi": 131,
+    "seoBaslik": "Kars Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kars şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 40,
+    "ad": "Kırşehir",
+    "slug": "kirsehir",
+    "plaka": "40",
+    "mekanSayisi": 6,
+    "etkinlikSayisi": 120,
+    "seoBaslik": "Kırşehir Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kırşehir şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 68,
+    "ad": "Aksaray",
+    "slug": "aksaray",
+    "plaka": "68",
+    "mekanSayisi": 13,
+    "etkinlikSayisi": 99,
+    "seoBaslik": "Aksaray Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Aksaray şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 2,
+    "ad": "Adıyaman",
+    "slug": "adiyaman",
+    "plaka": "02",
+    "mekanSayisi": 8,
+    "etkinlikSayisi": 93,
+    "seoBaslik": "Adıyaman Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Adıyaman şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 49,
+    "ad": "Muş",
+    "slug": "mus",
+    "plaka": "49",
+    "mekanSayisi": 3,
+    "etkinlikSayisi": 82,
+    "seoBaslik": "Muş Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Muş şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 66,
+    "ad": "Yozgat",
+    "slug": "yozgat",
+    "plaka": "66",
+    "mekanSayisi": 8,
+    "etkinlikSayisi": 74,
+    "seoBaslik": "Yozgat Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Yozgat şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 80,
+    "ad": "Osmaniye",
+    "slug": "osmaniye",
+    "plaka": "80",
+    "mekanSayisi": 13,
+    "etkinlikSayisi": 69,
+    "seoBaslik": "Osmaniye Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Osmaniye şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 8,
+    "ad": "Artvin",
+    "slug": "artvin",
+    "plaka": "08",
+    "mekanSayisi": 5,
+    "etkinlikSayisi": 66,
+    "seoBaslik": "Artvin Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Artvin şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 56,
+    "ad": "Siirt",
+    "slug": "siirt",
+    "plaka": "56",
+    "mekanSayisi": 7,
+    "etkinlikSayisi": 65,
+    "seoBaslik": "Siirt Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Siirt şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 76,
+    "ad": "Iğdır",
+    "slug": "igdir",
+    "plaka": "76",
+    "mekanSayisi": 4,
+    "etkinlikSayisi": 63,
+    "seoBaslik": "Iğdır Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Iğdır şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 79,
+    "ad": "Kilis",
+    "slug": "kilis",
+    "plaka": "79",
+    "mekanSayisi": 3,
+    "etkinlikSayisi": 60,
+    "seoBaslik": "Kilis Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kilis şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 62,
+    "ad": "Tunceli",
+    "slug": "tunceli",
+    "plaka": "62",
+    "mekanSayisi": 3,
+    "etkinlikSayisi": 52,
+    "seoBaslik": "Tunceli Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Tunceli şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 12,
+    "ad": "Bingöl",
+    "slug": "bingol",
+    "plaka": "12",
+    "mekanSayisi": 3,
+    "etkinlikSayisi": 42,
+    "seoBaslik": "Bingöl Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Bingöl şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 73,
+    "ad": "Şırnak",
+    "slug": "sirnak",
+    "plaka": "73",
+    "mekanSayisi": 9,
+    "etkinlikSayisi": 42,
+    "seoBaslik": "Şırnak Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Şırnak şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 13,
+    "ad": "Bitlis",
+    "slug": "bitlis",
+    "plaka": "13",
+    "mekanSayisi": 5,
+    "etkinlikSayisi": 41,
+    "seoBaslik": "Bitlis Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Bitlis şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 4,
+    "ad": "Ağrı",
+    "slug": "agri",
+    "plaka": "04",
+    "mekanSayisi": 4,
+    "etkinlikSayisi": 36,
+    "seoBaslik": "Ağrı Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Ağrı şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 11,
+    "ad": "Bilecik",
+    "slug": "bilecik",
+    "plaka": "11",
+    "mekanSayisi": 2,
+    "etkinlikSayisi": 36,
+    "seoBaslik": "Bilecik Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Bilecik şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 29,
+    "ad": "Gümüşhane",
+    "slug": "gumushane",
+    "plaka": "29",
+    "mekanSayisi": 4,
+    "etkinlikSayisi": 36,
+    "seoBaslik": "Gümüşhane Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Gümüşhane şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 18,
+    "ad": "Çankırı",
+    "slug": "cankiri",
+    "plaka": "18",
+    "mekanSayisi": 2,
+    "etkinlikSayisi": 33,
+    "seoBaslik": "Çankırı Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Çankırı şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 71,
+    "ad": "Kırıkkale",
+    "slug": "kirikkale",
+    "plaka": "71",
+    "mekanSayisi": 4,
+    "etkinlikSayisi": 28,
+    "seoBaslik": "Kırıkkale Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Kırıkkale şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 69,
+    "ad": "Bayburt",
+    "slug": "bayburt",
+    "plaka": "69",
+    "mekanSayisi": 7,
+    "etkinlikSayisi": 26,
+    "seoBaslik": "Bayburt Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Bayburt şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 75,
+    "ad": "Ardahan",
+    "slug": "ardahan",
+    "plaka": "75",
+    "mekanSayisi": 2,
+    "etkinlikSayisi": 22,
+    "seoBaslik": "Ardahan Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Ardahan şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  },
+  {
+    "id": 30,
+    "ad": "Hakkari",
+    "slug": "hakkari",
+    "plaka": "30",
+    "mekanSayisi": 5,
+    "etkinlikSayisi": 19,
+    "seoBaslik": "Hakkari Etkinlikleri, Konserler ve Tiyatrolar",
+    "seoAciklama": "Hakkari şehrindeki en güncel konserler, tiyatro oyunları, festivaller ve etkinlik mekanları Cerca'da."
+  }
+]

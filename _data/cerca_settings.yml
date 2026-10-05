@@ -1,0 +1,41 @@
+# ==============================================================================
+# CERCA PLATFORM MERKEZİ AYAR DOSYASI
+# Bu dosyadan marka adını, logoyu, tema renklerini ve SEO ayarlarını değiştirebilirsiniz.
+# ==============================================================================
+
+brand:
+  name: "Cerca"
+  tagline: "Sana En Yakın Etkinlikler, Konserler ve Mekanlar"
+  sub_tagline: "Türkiye'nin 81 ilinde konser, tiyatro, stand-up ve festivalleri anında keşfet."
+  logo: "/assets/img/cerca-logo.svg"
+  favicon: "/assets/img/favicon.svg"
+  default_city: "istanbul"
+
+# Tema Renkleri (Turuncu & Sıcak Açık Tonlar)
+theme:
+  primary: "#FF6600"         # Canlı Cerca Turuncusu
+  primary_hover: "#E65C00"   # Buton Hover Turuncusu
+  primary_light: "#FFF4ED"   # Çok Açık Turuncu Arka Plan Vurgusu
+  accent: "#FF944D"          # Amber / Sıcak Vurgu Rengi
+  bg_body: "#FAF9F6"         # Sıcak Krem / Açık Ton Arka Plan
+  bg_card: "#FFFFFF"         # Saf Beyaz Kart Arka Planı
+  text_main: "#1E2022"       # Okunabilir Koyu Gri Başlık ve Metin
+  text_muted: "#68717A"      # İkincil Açıklama Metni
+  border_color: "#EAECEF"    # İnce Çerçeve ve Çizgiler
+
+# SEO ve Arama Motoru Ayarları (Google & Yandex)
+seo:
+  site_url: "https://cerca.com.tr"
+  title_suffix: " | Cerca Etkinlik Rehberi"
+  default_description: "Şehrinizdeki en güncel konserler, tiyatro oyunları, festivaller, stand-up gösterileri ve etkinlik mekanları Cerca'da. Yakınınızdaki kültürü hemen keşfedin."
+  keywords: "etkinlikler, konser biletleri, tiyatro oyunları, stand-up gösterileri, mekanlar, istanbul etkinlikleri, izmir konserleri, ankara tiyatroları, yakınımdaki etkinlikler"
+  google_site_verification: ""
+  yandex_verification: ""
+  bing_verification: ""
+
+# İletişim ve Sosyal Medya
+social:
+  instagram: "https://instagram.com/cercaetkinlik"
+  twitter: "https://twitter.com/cercaetkinlik"
+  facebook: "https://facebook.com/cercaetkinlik"
+  email: "iletisim@cerca.com.tr"

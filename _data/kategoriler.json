@@ -1,0 +1,83 @@
+[
+  {
+    "id": 0,
+    "ad": "Kültür & Sanat",
+    "slug": "kultur-sanat",
+    "icon": "fa-palette",
+    "etkinlikSayisi": 62355,
+    "seoBaslik": "Türkiye Kültür & Sanat Etkinlikleri ve Biletleri",
+    "seoAciklama": "Türkiye genelindeki tüm güncel Kültür & Sanat etkinlikleri, seansları, mekanları ve bilet bilgileri Cerca'da."
+  },
+  {
+    "id": 1,
+    "ad": "Tiyatro",
+    "slug": "tiyatro",
+    "icon": "fa-masks-theater",
+    "etkinlikSayisi": 55433,
+    "seoBaslik": "Türkiye Tiyatro Etkinlikleri ve Biletleri",
+    "seoAciklama": "Türkiye genelindeki tüm güncel Tiyatro etkinlikleri, seansları, mekanları ve bilet bilgileri Cerca'da."
+  },
+  {
+    "id": 2,
+    "ad": "Konser",
+    "slug": "konser",
+    "icon": "fa-music",
+    "etkinlikSayisi": 54334,
+    "seoBaslik": "Türkiye Konser Etkinlikleri ve Biletleri",
+    "seoAciklama": "Türkiye genelindeki tüm güncel Konser etkinlikleri, seansları, mekanları ve bilet bilgileri Cerca'da."
+  },
+  {
+    "id": 16,
+    "ad": "Festival",
+    "slug": "festival",
+    "icon": "fa-campground",
+    "etkinlikSayisi": 27671,
+    "seoBaslik": "Türkiye Festival Etkinlikleri ve Biletleri",
+    "seoAciklama": "Türkiye genelindeki tüm güncel Festival etkinlikleri, seansları, mekanları ve bilet bilgileri Cerca'da."
+  },
+  {
+    "id": 40,
+    "ad": "Stand-Up & Komedi",
+    "slug": "stand-up",
+    "icon": "fa-microphone",
+    "etkinlikSayisi": 24876,
+    "seoBaslik": "Türkiye Stand-Up & Komedi Etkinlikleri ve Biletleri",
+    "seoAciklama": "Türkiye genelindeki tüm güncel Stand-Up & Komedi etkinlikleri, seansları, mekanları ve bilet bilgileri Cerca'da."
+  },
+  {
+    "id": 36,
+    "ad": "Çocuk & Aile",
+    "slug": "cocuk",
+    "icon": "fa-child",
+    "etkinlikSayisi": 2195,
+    "seoBaslik": "Türkiye Çocuk & Aile Etkinlikleri ve Biletleri",
+    "seoAciklama": "Türkiye genelindeki tüm güncel Çocuk & Aile etkinlikleri, seansları, mekanları ve bilet bilgileri Cerca'da."
+  },
+  {
+    "id": 3,
+    "ad": "Girişimcilik & Eğitim",
+    "slug": "egitim",
+    "icon": "fa-graduation-cap",
+    "etkinlikSayisi": 1898,
+    "seoBaslik": "Türkiye Girişimcilik & Eğitim Etkinlikleri ve Biletleri",
+    "seoAciklama": "Türkiye genelindeki tüm güncel Girişimcilik & Eğitim etkinlikleri, seansları, mekanları ve bilet bilgileri Cerca'da."
+  },
+  {
+    "id": 37,
+    "ad": "Sinema & Gösterim",
+    "slug": "sinema",
+    "icon": "fa-film",
+    "etkinlikSayisi": 589,
+    "seoBaslik": "Türkiye Sinema & Gösterim Etkinlikleri ve Biletleri",
+    "seoAciklama": "Türkiye genelindeki tüm güncel Sinema & Gösterim etkinlikleri, seansları, mekanları ve bilet bilgileri Cerca'da."
+  },
+  {
+    "id": 45,
+    "ad": "Spor & Dans",
+    "slug": "spor-dans",
+    "icon": "fa-person-running",
+    "etkinlikSayisi": 219,
+    "seoBaslik": "Türkiye Spor & Dans Etkinlikleri ve Biletleri",
+    "seoAciklama": "Türkiye genelindeki tüm güncel Spor & Dans etkinlikleri, seansları, mekanları ve bilet bilgileri Cerca'da."
+  }
+]

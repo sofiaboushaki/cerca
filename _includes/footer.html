@@ -1,0 +1,81 @@
+<!-- ==============================================================================
+     CERCA FOOTER (SEO İç Linkleme Silosu, Kurumsal Linkler & Telif)
+     ============================================================================== -->
+<footer class="cerca-footer">
+  <div class="cerca-container">
+    <div class="cerca-footer-grid">
+      <!-- Marka Bilgisi -->
+      <div class="cerca-footer-brand">
+        <a href="/" class="cerca-brand-logo">
+          <img src="{{ site.data.cerca_settings.brand.logo | default: '/assets/img/cerca-logo.svg' }}" 
+               alt="{{ site.data.cerca_settings.brand.name }} Logo" width="180" height="38" />
+        </a>
+        <p>
+          {{ site.data.cerca_settings.brand.tagline | default: "Sana En Yakın Etkinlikler, Konserler ve Mekanlar" }}
+          — Türkiye genelindeki tüm kültür-sanat etkinliklerini konumunuza göre en hızlı şekilde keşfedin.
+        </p>
+        <div style="margin-top: 16px; display: flex; gap: 12px;">
+          <a href="{{ site.data.cerca_settings.social.instagram }}" target="_blank" rel="noopener" style="color: var(--cerca-primary); font-size: 1.2rem;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="{{ site.data.cerca_settings.social.twitter }}" target="_blank" rel="noopener" style="color: var(--cerca-primary); font-size: 1.2rem;">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="{{ site.data.cerca_settings.social.facebook }}" target="_blank" rel="noopener" style="color: var(--cerca-primary); font-size: 1.2rem;">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Popüler Şehirler SEO Ağı -->
+      <div class="cerca-footer-col">
+        <h5>Popüler Şehirler</h5>
+        <ul class="cerca-footer-links">
+          <li><a href="/sehir/istanbul/">İstanbul Etkinlikleri</a></li>
+          <li><a href="/sehir/izmir/">İzmir Etkinlikleri</a></li>
+          <li><a href="/sehir/ankara/">Ankara Etkinlikleri</a></li>
+          <li><a href="/sehir/antalya/">Antalya Etkinlikleri</a></li>
+          <li><a href="/sehir/bursa/">Bursa Etkinlikleri</a></li>
+          <li><a href="/sehir/mugla/">Muğla Etkinlikleri</a></li>
+          <li><a href="/sehirler/">Tüm Şehirler Rehberi</a></li>
+        </ul>
+      </div>
+
+      <!-- Kategoriler -->
+      <div class="cerca-footer-col">
+        <h5>Kategoriler</h5>
+        <ul class="cerca-footer-links">
+          <li><a href="/kategori/konser/">Konser Takvimi</a></li>
+          <li><a href="/kategori/tiyatro/">Tiyatro Oyunları</a></li>
+          <li><a href="/kategori/stand-up/">Stand-Up Gösterileri</a></li>
+          <li><a href="/kategori/festival/">Müzik Festivalleri</a></li>
+          <li><a href="/kategori/cocuk/">Çocuk Etkinlikleri</a></li>
+          <li><a href="/kategori/kultur-sanat/">Kültür & Sanat Sergileri</a></li>
+        </ul>
+      </div>
+
+      <!-- Hızlı Bağlantılar -->
+      <div class="cerca-footer-col">
+        <h5>Keşfet & Rehber</h5>
+        <ul class="cerca-footer-links">
+          <li><a href="/mekanlar/">Popüler Mekanlar</a></li>
+          <li><a href="/sanatcilar/">Sanatçı Dizini</a></li>
+          <li><a href="/yakindaki-etkinlikler/">Bana En Yakın Etkinlikler</a></li>
+          <li><a href="/hakkimizda/">Hakkımızda</a></li>
+          <li><a href="/iletisim/">İletişim & Bilet İade</a></li>
+          <li><a href="/gizlilik-politikasi/">Gizlilik & Çerez Politikası</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Alt Telif & Bilgi -->
+    <div class="cerca-footer-bottom">
+      <div>
+        &copy; {{ 'now' | date: "%Y" }} <strong>Cerca</strong>. Tüm hakları saklıdır.
+      </div>
+      <div>
+        Google & Yandex Arama Motoru Dostu Evergreen Etkinlik Rehberi
+      </div>
+    </div>
+  </div>
+</footer>

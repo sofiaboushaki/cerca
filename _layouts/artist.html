@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="cerca-container" style="padding-top: 30px; padding-bottom: 60px;">
+  <!-- Breadcrumb -->
+  <nav aria-label="Ekmek Kırıntısı" style="margin-bottom: 20px; font-size: 0.85rem; color: var(--cerca-text-muted);">
+    <a href="/">Ana Sayfa</a> &raquo;
+    <a href="/sanatcilar/">Sanatçılar</a> &raquo;
+    <span style="color: var(--cerca-text); font-weight: 600;">{{ page.title }}</span>
+  </nav>
+
+  <!-- Sanatçı Başlık Kartı -->
+  <div style="background: #FFFFFF; border: 1px solid var(--cerca-border); border-radius: var(--radius-md); padding: 32px; margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+    <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
+      <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #FF7A00, #FF5500); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; box-shadow: var(--shadow-md);">
+        {{ page.title | slice: 0, 1 }}
+      </div>
+      <div>
+        <span class="cerca-badge-cat" style="margin-bottom: 6px; display: inline-block;">
+          <i class="fas fa-microphone"></i> Sanatçı / Müzik Grubu
+        </span>
+        <h1 style="font-size: 2.3rem; margin-bottom: 6px;">{{ page.title }}</h1>
+        {% if page.birth_place and page.birth_place != "" %}
+        <p style="color: var(--cerca-text-muted); font-size: 0.95rem;">
+          <i class="fas fa-location-dot" style="color: var(--cerca-primary);"></i> Doğum Yeri: {{ page.birth_place }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if page.bio and page.bio != "" %}
+    <div style="margin-top: 24px; border-top: 1px solid var(--cerca-border); padding-top: 20px; color: var(--cerca-text); line-height: 1.8; font-size: 0.95rem;">
+      <h3 style="font-size: 1.15rem; margin-bottom: 10px;">Biyografi</h3>
+      {{ page.bio }}
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- Konser ve Etkinlik Takvimi -->
+  <section>
+    <div class="cerca-section-header">
+      <div>
+        <h2 class="cerca-section-title">{{ page.title }} Konser & Turne Takvimi</h2>
+        <p class="text-muted">Sahnelenen tüm güncel turne tarihleri ve biletleri</p>
+      </div>
+    </div>
+
+    {{ content }}
+  </section>
+</div>
