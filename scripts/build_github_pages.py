@@ -534,7 +534,8 @@ page_404_meta = {
 }
 rendered_404 = render_page(spa_404_body, page_404_meta)
 write_file(os.path.join(DOCS_DIR, "404.html"), rendered_404)
-print(f"[✓] Akıllı Evergreen 404.html oluşturuldu.")
+write_file(os.path.join(DOCS_DIR, "CNAME"), "cerca.com.tr\n")
+print(f"[✓] Akıllı Evergreen 404.html ve CNAME oluşturuldu.")
 
 print("\n" + "="*60)
 print(f"BAŞARILI: Cerca GitHub Pages statik sitesi hazır!")
