@@ -5,16 +5,6 @@
      Sayfa kapanış </body> etiketinden hemen önce yüklenir.
      ============================================================================== -->
 
-<!-- Google Analytics 4 (Eğer ayar dosyasında tanımlıysa otomatik yüklenir) -->
-{% if site.data.cerca_settings.scripts.google_analytics_id and site.data.cerca_settings.scripts.google_analytics_id != "" %}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.cerca_settings.scripts.google_analytics_id }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ site.data.cerca_settings.scripts.google_analytics_id }}');
-</script>
-{% endif %}
 
 <!-- Yandex Metrica (Eğer ayar dosyasında tanımlıysa otomatik yüklenir) -->
 {% if site.data.cerca_settings.scripts.yandex_metrica_id and site.data.cerca_settings.scripts.yandex_metrica_id != "" %}

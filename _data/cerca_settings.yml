@@ -39,3 +39,8 @@ social:
   twitter: "https://twitter.com/cercaetkinlik"
   facebook: "https://facebook.com/cercaetkinlik"
   email: "iletisim@cerca.com.tr"
+
+# Harici Scriptler ve İzleme Kodları
+scripts:
+  google_analytics_id: "G-M3GZ1J9HWR"
+  yandex_metrica_id: ""
